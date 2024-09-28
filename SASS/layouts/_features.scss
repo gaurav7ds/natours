@@ -1,0 +1,32 @@
+.features{
+    padding: 20rem 10rem;
+    background: linear-gradient(to right bottom, rgba($color-primary-light, 0.8),rgba($color-primary-dark, 0.8)) ,url('../img/nat-4.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+    &-wrapper{
+        @include grid(4);
+        gap: 4rem;
+    }
+    & > *{
+        transform: skewY(7deg);
+    }
+}
+.feature-box{
+    text-align: center;
+    color: $color-grey;
+    padding: 4rem 3rem;
+    background-color: rgba($color-white,.7);
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: .2rem .2rem 3rem rgba($color-black,.5);
+    &:hover{
+        transform: translateY(-1.5rem);
+    }
+    ion-icon{
+        font-size: 7rem;
+        margin-bottom: 3rem;
+        color: $color-primary;
+    }
+}

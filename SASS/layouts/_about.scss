@@ -1,0 +1,51 @@
+.about{
+    padding: 25rem 5rem 10rem 5rem;
+    background-color: #f7f7f7;
+    margin-top: -23vh;
+}
+.about-content{
+    @include grid(2);
+    gap: 2rem;
+    color: $color-grey;
+    padding:10rem;
+    &__left{
+        &--row{
+            margin-bottom: 3.2rem;
+        }
+    }
+    &__right{
+        position: relative;
+        img{
+            width: 50%;
+            object-fit: cover;
+            position: absolute;
+            box-shadow: .2rem .2rem 3rem rgba($color-black,.5);
+            cursor: pointer;
+            z-index: 10;
+            transition: all .2s;
+            outline-offset: 2rem;
+            &:hover{
+                z-index: 12;
+                transform: scale(1.1);
+                box-shadow: .3rem .3rem 4rem rgba($color-black,.6);
+                outline: 1.6rem solid $color-primary;
+            }
+        }
+        &:hover img:not(:hover){
+            transform: scale(.95);
+        }
+    }
+}
+.about-img-1{
+    left: 5%;
+    top: 0;
+}
+.about-img-2{
+    left: 45%;
+    top: 15%;
+}
+.about-img-3{
+    left: 25%;
+    top: 40%;
+}
+

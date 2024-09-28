@@ -1,0 +1,94 @@
+.btn{
+    &:link,
+    &:visited{
+        display: block;
+        padding: 1.6rem 2.8rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        border-radius: 50rem;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        transition: all .3s ease-out;
+    }
+    &--white{
+        background-color: $color-white;
+        color: $color-grey;
+    }
+    &--green{
+        background-color: $color-primary;
+        color: $color-white;
+        text-transform: uppercase;
+        &::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: $color-primary !important;
+            left: 0;
+            top: 0;
+            border-radius: 50rem;
+            transform: scale(.7);
+            opacity: 1;
+            transition: all .5s ease-out;
+            z-index: -1;
+        }
+    }
+    &--animated{
+        opacity: 1;
+        animation: fromDown .5s 1s ease-out backwards;
+    }
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $color-white;
+        left: 0;
+        top: 0;
+        border-radius: 50rem;
+        transform: scale(.7);
+        opacity: 1;
+        transition: all .5s ease-out;
+        z-index: -1;
+    }
+    &:hover{
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black,.3);
+        &::before{
+            transform: scale(1.4);
+            opacity: 0;
+        }
+    }
+    &:active{
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.4);
+        color: $color-grey;
+    }
+}
+
+.link-btn{
+    &:link,
+    &:visited{
+        color: $color-primary;
+        font-size: 1.8rem;
+        display: block;
+        padding: 1rem;
+        border-bottom: .2rem solid $color-primary;
+        width: fit-content;
+        transition: all .3s ;
+    }
+    &:hover{
+        transform: translateY(-.3rem);
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black,.3);
+    }
+    &:active{
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.4);
+        color: $color-white;
+    }
+
+}
